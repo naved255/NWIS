@@ -1,0 +1,508 @@
+# ============================================================
+
+# NWIS - National Well Intelligence System
+
+# Root Git Ignore
+
+# ============================================================
+
+# ------------------------------------------------------------
+
+# OS / Editor Files
+
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# ------------------------------------------------------------
+
+# Environment / Secrets
+
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+!.env.sample
+
+*.key
+*.pem
+*.crt
+*.cer
+secrets/
+credentials/
+private/
+
+# ------------------------------------------------------------
+
+# Python
+
+# ------------------------------------------------------------
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+*.so
+
+# Virtual environments
+
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Python packaging
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / Coverage
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+
+# Node / React / Vite
+
+# ------------------------------------------------------------
+
+node_modules/
+
+# Frontend builds
+
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# General Node builds
+
+dist/
+build/
+
+# npm logs
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager caches
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# ------------------------------------------------------------
+
+# Frontend Environment Files
+
+# ------------------------------------------------------------
+
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Allow example environment files
+
+!frontend/.env.example
+!frontend/.env.sample
+
+# ------------------------------------------------------------
+
+# Backend Environment Files
+
+# ------------------------------------------------------------
+
+backend/.env
+backend/.env.local
+backend/.env.development
+backend/.env.production
+
+!backend/.env.example
+!backend/.env.sample
+
+# ------------------------------------------------------------
+
+# ML Models / Large Generated Files
+
+# ------------------------------------------------------------
+
+# Trained model files
+
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.h5
+*.keras
+*.ckpt
+*.safetensors
+
+# ML experiment outputs
+
+ml/runs/
+ml/outputs/
+ml/experiments/
+ml/checkpoints/
+ml/logs/
+
+# TensorBoard
+
+runs/
+logs/
+
+# ------------------------------------------------------------
+
+# RAG / Vector Databases
+
+# ------------------------------------------------------------
+
+# Local vector database data
+
+qdrant_data/
+qdrant_storage/
+
+# Chroma
+
+chroma_db/
+.chroma/
+
+# FAISS indexes
+
+*.faiss
+*.index
+
+# Local embeddings/cache
+
+embeddings/
+vector_store/
+vectorstore/
+
+# ------------------------------------------------------------
+
+# Uploaded / Generated Documents
+
+# ------------------------------------------------------------
+
+uploads/
+uploaded_files/
+documents_processed/
+processed_documents/
+
+# Generated OCR output
+
+ocr_output/
+ocr_outputs/
+
+# Generated NLP output
+
+nlp_output/
+nlp_outputs/
+
+# Generated reports
+
+generated_reports/
+
+# Temporary files
+
+tmp/
+temp/
+*.tmp
+
+# ------------------------------------------------------------
+
+# Data Files
+
+# ------------------------------------------------------------
+
+# Ignore large/local datasets by default
+
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# Keep small/sample datasets if intentionally committed
+
+!data/sample/
+!**/data/sample/**
+!**/data/*.sample.csv
+
+# ------------------------------------------------------------
+
+# Database Files
+
+# ------------------------------------------------------------
+
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL local dumps
+
+*.dump
+*.sql.gz
+
+# ------------------------------------------------------------
+
+# Docker
+
+# ------------------------------------------------------------
+
+# Docker local volumes
+
+docker-data/
+docker-volumes/
+
+# Do NOT ignore Docker configuration files:
+
+# docker-compose.yml
+
+# docker-compose.yaml
+
+# Dockerfile
+
+# ------------------------------------------------------------
+
+# Logs
+
+# ------------------------------------------------------------
+
+*.log
+logs/
+log/
+backend/logs/
+frontend/logs/
+realtime/logs/
+
+# ------------------------------------------------------------
+
+# Temporary Runtime Files
+
+# ------------------------------------------------------------
+
+*.pid
+*.pid.lock
+*.seed
+
+.cache/
+.cache-loader/
+.parcel-cache/
+
+# ------------------------------------------------------------
+
+# API / Runtime Generated Files
+
+# ------------------------------------------------------------
+
+runtime/
+runtime_data/
+sessions/
+socket_data/
+
+# ------------------------------------------------------------
+
+# RAG Runtime Files
+
+# ------------------------------------------------------------
+
+rag/cache/
+rag/index/
+rag/storage/
+rag/runtime/
+
+# ------------------------------------------------------------
+
+# OCR Runtime Files
+
+# ------------------------------------------------------------
+
+ingestion/cache/
+ingestion/tmp/
+ingestion/output/
+
+# ------------------------------------------------------------
+
+# Geo Processing Outputs
+
+# ------------------------------------------------------------
+
+geo/cache/
+geo/output/
+geo/processed/
+
+# ------------------------------------------------------------
+
+# Real-Time Runtime Data
+
+# ------------------------------------------------------------
+
+realtime/cache/
+realtime/runtime/
+realtime/events/
+
+# ------------------------------------------------------------
+
+# Reports Generated During Development
+
+# ------------------------------------------------------------
+
+*.html
+*.coverage
+coverage.xml
+
+# Keep project documentation
+
+!docs/
+!docs/**/*.md
+
+# ------------------------------------------------------------
+
+# ZIP / Archive Files
+
+# ------------------------------------------------------------
+
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ------------------------------------------------------------
+
+# Generated Integration Artifacts
+
+# ------------------------------------------------------------
+
+integration_output/
+test_output/
+qa_output/
+
+# ------------------------------------------------------------
+
+# Local IDE / Tool State
+
+# ------------------------------------------------------------
+
+.history/
+.project/
+.settings/
+
+# ------------------------------------------------------------
+
+# Miscellaneous
+
+# ------------------------------------------------------------
+
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# Ignore generated lock/temp files only
+
+*.lock
+
+# ------------------------------------------------------------
+
+# IMPORTANT
+
+# ------------------------------------------------------------
+
+# The following SHOULD normally be committed:
+
+#
+
+# README.md
+
+# .gitignore
+
+# requirements.txt
+
+# package.json
+
+# package-lock.json
+
+# Dockerfile
+
+# docker-compose.yml
+
+# .env.example
+
+# backend source
+
+# frontend source
+
+# ml source code
+
+# rag source code
+
+# ingestion source code
+
+# geo source code
+
+# realtime source code
+
+# tests
+
+# contracts
+
+# docs
+
+#
+
+# Do NOT commit:
+
+# passwords
+
+# API keys
+
+# database credentials
+
+# private certificates
+
+# production secrets
+
+# huge trained models
+
+# local databases
+
+# node_modules
+
+# Python virtual environments
+
+# generated vector databases
+
+# uploaded documents
+
+# runtime logs

@@ -1,0 +1,12 @@
+[
+  {
+    "document_id": "DOC-W001-COMP-001",
+    "document_type": "well_completion_report",
+    "file_name": "W001_completion_report.pdf",
+    "mime_type": "application/pdf",
+    "file_size_bytes": 245760,
+    "well_id": "W-001",
+    "document_date": "2026-08-20",
+    "extraction_status": "not_extracted"
+  }
+]

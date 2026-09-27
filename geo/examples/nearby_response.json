@@ -1,0 +1,23 @@
+{
+  "source": "coordinates",
+  "latitude": 27.5,
+  "longitude": 95.2,
+  "radius_km": 10,
+  "count": 2,
+  "wells": [
+    {
+      "well_id": "NWIS-GEO-002",
+      "well_name": "Fictional Alpha-02",
+      "field_name": "Fictional North Field",
+      "operator": "SAMPLE",
+      "status": "COMPLETED",
+      "latitude": 27.53,
+      "longitude": 95.22,
+      "total_depth_m": 3050.0,
+      "distance_km": 3.8,
+      "formations": ["Demo Sandstone"],
+      "reservoirs": ["Reservoir-A"],
+      "depth_overlap_m": null
+    }
+  ]
+}

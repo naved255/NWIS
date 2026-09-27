@@ -1,0 +1,5 @@
+[
+  {"wellId": "W-001", "timestamp": "2026-09-27T08:00:00Z", "depth": 2400, "rop": 18.2, "wob": 12.5, "rpm": 110, "mudWeight": 1.18},
+  {"well_id": "W-001", "timestamp": "2026-09-27T08:00:00Z", "depth": 2400, "rop": 18.2, "wob": 12.5, "rpm": 110, "mud_weight": 1.18},
+  {"wellId": "W-001", "timestamp": "2026-09-27T09:00:00Z", "depth": 2412, "rop": 17.9, "wob": 12.8, "rpm": 112, "mudWeight": 1.19}
+]

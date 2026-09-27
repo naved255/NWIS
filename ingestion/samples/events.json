@@ -1,0 +1,4 @@
+{"records": [
+  {"eventId": "E-001", "wellId": "W-001", "event": "LOSS_OF_CIRCULATION", "date": "2026-09-27T09:15:00Z", "depth": 2415, "severity": "HIGH", "description": "Demo sample event"},
+  {"eventId": "E-002", "wellId": "W-002", "event": "CASING_RUN", "date": "2026-09-26T15:30:00Z", "depth": 2800, "severity": "LOW"}
+]}

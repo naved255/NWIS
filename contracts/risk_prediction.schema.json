@@ -1,0 +1,81 @@
+{
+  "properties": {
+    "prediction_id": {
+      "title": "Prediction Id",
+      "type": "string"
+    },
+    "well_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Well Id"
+    },
+    "risk_type": {
+      "title": "Risk Type",
+      "type": "string"
+    },
+    "probability": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Probability",
+      "type": "number"
+    },
+    "severity": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "model_version": {
+      "title": "Model Version",
+      "type": "string"
+    },
+    "explanation": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Explanation"
+    },
+    "predicted_at": {
+      "format": "date-time",
+      "title": "Predicted At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "prediction_id",
+    "risk_type",
+    "probability",
+    "severity",
+    "confidence",
+    "model_version",
+    "predicted_at"
+  ],
+  "title": "RiskPredictionResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-nwis-source-model": "backend.app.schemas.RiskPredictionResponse"
+}

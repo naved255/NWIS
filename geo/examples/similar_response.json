@@ -1,0 +1,37 @@
+{
+  "active_well_id": "NWIS-GEO-001",
+  "radius_km": 25,
+  "formation": "Demo Sandstone",
+  "depth_range": {"from_m": 1800, "to_m": 2400},
+  "count": 1,
+  "wells": [
+    {
+      "well": {
+        "well_id": "NWIS-GEO-002",
+        "well_name": "Fictional Alpha-02",
+        "field_name": "Fictional North Field",
+        "operator": "SAMPLE",
+        "status": "COMPLETED",
+        "latitude": 27.53,
+        "longitude": 95.22,
+        "total_depth_m": 3050,
+        "distance_km": 3.8,
+        "formations": ["Demo Sandstone"],
+        "reservoirs": ["Reservoir-A"],
+        "depth_overlap_m": 600
+      },
+      "similarity_score": 91.2,
+      "factors": {
+        "spatial_score": 0.848,
+        "formation_score": 1.0,
+        "reservoir_score": 1.0,
+        "depth_score": 1.0,
+        "event_score": 1.0,
+        "drilling_condition_score": 1.0
+      },
+      "shared_formations": ["Demo Sandstone"],
+      "shared_reservoirs": ["Reservoir-A"],
+      "shared_events": ["FORMATION_ENTRY"]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+langchain-core>=0.3,<2
+langchain-qdrant>=0.2,<1
+langchain-huggingface>=0.1,<1
+langchain-text-splitters>=0.3,<2
+qdrant-client>=1.12,<2
+sentence-transformers>=3.0,<6
+pydantic>=2.7,<3
