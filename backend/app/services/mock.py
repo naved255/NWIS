@@ -69,7 +69,12 @@ class MockKnowledgeService(KnowledgeService):
 
 class MockPredictionService(PredictionService):
     def __init__(self) -> None:
-        self.items: list[RiskPredictionResponse] = []
+        self.items: list[RiskPredictionResponse] = [
+            RiskPredictionResponse(prediction_id="pred-001", well_id="WELL-001", risk_type="mud_loss", probability=0.21, severity="low", confidence=0.74, model_version="mock-1.0.0", explanation={"features": [{"feature": "Mud flow", "contribution": -0.08}, {"feature": "Mud weight", "contribution": 0.04}]}, predicted_at=_NOW),
+            RiskPredictionResponse(prediction_id="pred-002", well_id="WELL-001", risk_type="stuck_pipe", probability=0.47, severity="medium", confidence=0.69, model_version="mock-1.0.0", explanation={"features": [{"feature": "Torque", "contribution": 0.21}, {"feature": "ROP", "contribution": 0.10}]}, predicted_at=_NOW),
+            RiskPredictionResponse(prediction_id="pred-003", well_id="WELL-001", risk_type="kick", probability=0.12, severity="low", confidence=0.81, model_version="mock-1.0.0", explanation={"features": [{"feature": "Pressure", "contribution": -0.06}]}, predicted_at=_NOW),
+            RiskPredictionResponse(prediction_id="pred-004", well_id="WELL-001", risk_type="overpressure", probability=0.58, severity="medium", confidence=0.63, model_version="mock-1.0.0", explanation={"features": [{"feature": "Pressure", "contribution": 0.18}, {"feature": "Depth", "contribution": 0.11}]}, predicted_at=_NOW),
+        ]
 
     def predict(self, well_id, risk_type, features):
         risk = risk_type or "drilling_anomaly"

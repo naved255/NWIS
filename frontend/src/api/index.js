@@ -36,12 +36,12 @@ const realApi = {
     return r.data.items.map(mapWell);
   },
   getWell: async (id) => mapWell((await apiClient.get(`/wells/${id}`)).data),
-  getMonitoring: async (id) => (await apiClient.get(`/wells/${id}/monitoring`)).data,
-  getRisks: async (id) => (await apiClient.get('/predictions', {params:{well_id:id}})).data.items.map(mapPrediction),
-  getEvents: async (id) => (await apiClient.get(`/wells/${id}/events`)).data.items.map(mapEvent),
+  getMonitoring: async (id = ACTIVE_WELL) => (await apiClient.get(`/wells/${id}/monitoring`)).data,
+  getRisks: async (id = ACTIVE_WELL) => (await apiClient.get('/predictions', {params:{well_id:id}})).data.items.map(mapPrediction),
+  getEvents: async (id = ACTIVE_WELL) => (await apiClient.get(`/wells/${id}/events`)).data.items.map(mapEvent),
   getAlerts: async (wellId) => (await apiClient.get('/alerts', {params:{well_id:wellId}})).data.items.map(a => ({id:a.id,type:a.alert_type,severity:a.severity,title:a.alert_type,message:a.message,wellId:a.well_id,timestamp:a.triggered_at,status:a.status})),
   getComparison: async (id) => (await apiClient.get('/wells/nearby', {params:{well_id:id, radius_km:25}})).data.items.map(w => ({wellId:w.well_id,name:w.well_name || w.well_id,distance:w.distance_km,depth:w.total_depth_m,formation:w.formation_matches?.[0] || '—',rop:'—',events:w.event_types?.length || 0,risk:'medium'})),
-  getTrend: async (id) => (await apiClient.get(`/wells/${id}/trend`)).data,
+  getTrend: async (id = ACTIVE_WELL) => (await apiClient.get(`/wells/${id}/trend`)).data,
   searchKnowledge: async (query) => {
     const r = await apiClient.post('/search', {query, limit:10});
     return {query, demo:false, results:r.data.items.map(x => ({id:x.result_id,title:x.title || x.document_id || 'Evidence',type:x.metadata?.event_type || 'DOCUMENT',score:x.score || 0,summary:x.text,source:x.source_uri}))};
